@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Staff Portal | GnanaRestaurant</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body class="staff-body">
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">G</span> Gnana<span>Restaurant</span></a><nav><a href="/">Customer website</a><a class="active" href="/staff">Staff dashboard</a></nav></header>
+<main class="staff-main">
+  <div class="section-heading"><div><p class="eyebrow">INTERNAL WORKSPACE</p><h1>Staff dashboard</h1></div><button class="button button-dark" id="refreshBtn">↻ Refresh data</button></div>
+  <div class="stats-grid"><div class="stat-card"><span>Total bookings</span><strong id="totalCount">—</strong></div><div class="stat-card"><span>Pending</span><strong id="pendingCount">—</strong></div><div class="stat-card"><span>Confirmed</span><strong id="confirmedCount">—</strong></div><div class="stat-card"><span>Tables listed</span><strong id="tableCount">—</strong></div></div>
+  <section class="panel">
+  <div class="panel-heading">
+    <div>
+      <p class="eyebrow">CUSTOMER MANAGEMENT</p>
+      <h2>Customer Details</h2>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="customerRows">
+        <tr><td colspan="5">Loading customers...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+  <section class="panel"><div class="panel-heading"><div><p class="eyebrow">BOOKING MANAGEMENT</p><h2>Reservations</h2></div><input id="searchInput" class="search" placeholder="Search name or table…"></div><div class="table-wrap"><table><thead><tr><th>ID</th><th>Customer</th><th>Table</th><th>Date & time</th><th>Guests</th><th>Status</th><th>Actions</th></tr></thead><tbody id="reservationRows"><tr><td colspan="7">Loading reservations…</td></tr></tbody></table></div></section>
+  <section class="panel"><div class="panel-heading"><div><p class="eyebrow">TABLE INVENTORY</p><h2>Manage tables</h2></div></div>
+    <form id="tableForm" class="inline-form"><input name="table_number" required placeholder="Table number (e.g. T07)"><input name="seating_capacity" type="number" min="1" max="20" required placeholder="Seats"><input name="location" required placeholder="Location"><button class="button button-dark" type="submit">+ Add table</button></form>
+    <div id="tableAdmin" class="admin-table-list"></div><p id="staffMessage" class="form-message"></p>
+  </section>
+</main><footer><a class="brand" href="/"><span class="brand-mark">G</span> Gnana<span>Restaurant</span></a><p>Staff tools · Keep every seat in good hands.</p><a href="/">Back to website</a></footer>
+<script src="js/staff.js"></script></body></html>

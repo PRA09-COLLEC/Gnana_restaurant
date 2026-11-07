@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GnanaRestaurant | Reserve a Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"> <span class="brand-mark">G</span> Gnana<span>Restaurant</span></a><nav><a class="active" href="/">Home</a><a href="#tables">Our Tables</a><a href="#booking">Reservations</a><a href="/staff">Staff Portal ↗</a></nav></header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow">A PLACE TO SLOW DOWN & SAVOR</p><h1>Good food.<br><em>Great company.</em></h1><p class="hero-text">Make room for moments worth remembering. Find your perfect table and let us take care of the rest.</p><a class="button button-light" href="#booking">Reserve your table <span>→</span></a></div>
+  <div class="hero-note"><span class="note-line"></span><span>FRESHLY PREPARED · THOUGHTFULLY SERVED</span></div>
+</section>
+<section class="section" id="tables">
+  <div class="section-heading"><div><p class="eyebrow">YOUR SEAT AWAITS</p><h2>Explore our tables</h2></div><p>Choose a setting that feels just right<br>for your occasion.</p></div>
+  <div class="table-grid" id="tableGrid"><p class="muted">Loading tables…</p></div>
+</section>
+<section class="booking-section" id="booking">
+  <div class="booking-intro"><p class="eyebrow">MAKE IT A DATE</p><h2>Reserve your<br><em>favorite spot.</em></h2><p>Share a few details and we'll save a place for you.</p><div class="booking-stamp">G<span>R</span></div></div>
+  <form id="bookingForm" class="booking-card">
+    <h3>Reservation details</h3><p class="muted">Fields marked * are required.</p>
+    <div class="form-grid">
+      <label>Your name *<input name="name" required placeholder="Full name"></label>
+      <label>Email address *<input name="email" type="email" required placeholder="you@example.com"></label>
+      <label>Phone number *<input name="phone" required placeholder="Mobile number"></label>
+      <label>Create password *<input name="password" type="password" required minlength="6" placeholder="At least 6 characters"></label>
+      <label>Reservation date *<input name="reservation_date" id="date" type="date" required></label>
+      <label>Preferred time *<select name="reservation_time" required><option value="">Select time</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option></select></label>
+      <label>Number of guests *<input name="guests" type="number" min="1" max="8" required value="2"></label>
+      <label>Available table *<select name="table_id" id="tableSelect" required><option value="">Choose date and time first</option></select></label>
+    </div>
+    <button class="button button-dark full" type="submit">Request reservation <span>→</span></button>
+    <p class="form-message" id="bookingMessage" aria-live="polite"></p>
+    <p class="fine-print">Your reservation will be marked Pending until our staff confirms it.</p>
+  </form>
+</section>
+</main>
+<footer><a class="brand" href="/"><span class="brand-mark">G</span> Gnana<span>Restaurant</span></a><p>Made for good food and better memories.</p><a href="/staff">Staff portal</a></footer>
+<script src="js/customer.js"></script>
+</body></html>
